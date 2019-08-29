@@ -1,4 +1,4 @@
-#region license
+﻿#region license
 // Copyright (c) 2007-2010 Mauricio Scheffer
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,7 +29,6 @@ using SolrNet.Impl.FieldParsers;
 using SolrNet.Impl.ResponseParsers;
 using SolrNet.Mapping;
 using SolrNet.Tests.Utils;
-using Castle.Facilities.SolrNetIntegration;
 
 namespace SolrNet.Tests
 {
@@ -398,15 +397,6 @@ namespace SolrNet.Tests
                 yield return n.Value;
             foreach (var i in n.Children.SelectMany(Flatten))
                 yield return i;
-        }
-
-
-        [Fact(Skip = "Performance test, potentially slow")]
-        public void Performance()
-        {
-            var container = new ProfilingContainer();
-            container.AddFacility("solr", new SolrNetFacility("http://localhost"));
-            ProfileTest(container);
         }
 
         [Fact]

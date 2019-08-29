@@ -152,9 +152,6 @@
     <ProjectReference Include="..\SolrNet\SolrNet.csproj">
       <Name>SolrNet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Castle.Facilities.SolrNetIntegration\Castle.Facilities.SolrNetIntegration.csproj">
-      <Name>Castle.Facilities.SolrNetIntegration</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SolrNet.Tests.Common\SolrNet.Tests.Common.csproj">
       <Name>SolrNet.Tests.Common</Name>
     </ProjectReference>
